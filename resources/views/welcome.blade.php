@@ -25,9 +25,9 @@
             </div>
         </header>
 
-        <div class="max-w-6xl mx-auto grid grid-cols-3 gap-6 mt-6">
+        <div class="max-w-6xl mx-2 md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 mt-6 text-sm md:text-base">
 
-            <div class="border border-stone-700 p-4 rounded-lg col-span-2">
+            <div class="md:border border-stone-700 p-4 rounded-lg col-span-2">
                 <h1 class="text-2xl font-semibold text-blue-800 mb-4">What are EDICs?</h1>
                 <p class="mb-2">
                     <span class="font-semibold">European Digital Infrastructure Consortiums (EDICs)</span> are legal instruments
@@ -35,32 +35,32 @@
                     Their key features include:
                 </p>
 
-                <ul class="list-disc list-inside mb-4">
+                <ul class="list-disc pl-4">
                     <li>Focus on <span class="font-semibold">deployment and scaling</span> up rather than just research</li>
                     <li>Member states in the driving seat (maintaining at least 51% of votes)</li>
                     <li>Flexible governance structure (only assembly of members and director are mandatory)</li>
                     <li><span class="font-semibold">Long-term sustainability</span> beyond typical project durations (24-48 months)</li>
-                    <li>Linked to <a class="underline" target="_blank" href="https://digital-strategy.ec.europa.eu/en/library/digital-decade-policy-programme-2030">Digital Decade Policy Program</a> objectives</li>
+                    <li>Linked to <a class="underline decoration-blue-800 hover:bg-blue-50" target="_blank" href="https://digital-strategy.ec.europa.eu/en/library/digital-decade-policy-programme-2030">Digital Decade Policy Program</a> objectives</li>
                     <li>Enable <span class="font-semibold">pooling of resources</span> (financial, data, expertise) across countries</li>
 
                 </ul>
              </div>
 
-            <div class="border border-stone-100 bg-stone-100 p-4 rounded-lg">
+            <div class="border border-stone-100 bg-stone-100 -mx-2 p-4 md:rounded-lg">
                 <h2 class="text-2xl font-semibold text-stone-400 mb-4">Disclosure</h2>
                 <p>
                     This is <span class="font-semibold">not an official website</span> of the European Commission or any other EU institution.<br/>
                     It is a <span class="font-semibold">community-driven initiative</span> to provide information about EDICs.<br/><br/>
                 </p>
                 <h3 class="font-semibold text-sm">Need official information?</h3>
-                <p>Visit the <a class="underline" target="_blank" href="https://digital-strategy.ec.europa.eu/en/policies/edic"> EDICs page</a> on the EU website.</p>
+                <p>Visit the <a class="underline decoration-blue-800 hover:bg-blue-50" target="_blank" href="https://digital-strategy.ec.europa.eu/en/policies/edic"> EDICs page</a> on the EU website.</p>
 
                 <h3 class="mt-4 font-semibold text-sm">Spotted a mistake? Have a suggestion?</h3>
-                <p>Mail us at info@edics.eu</p>
+                <p>Mail us at <a class="underline decoration-blue-800 hover:bg-blue-50" href="mailto:info@edics.eu">info@edics.eu</a></p>
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto mt-6 grid grid-cols-2 gap-6">
+        <div class="max-w-6xl mx-2 md:mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
 
             @foreach($established as $edic)
                 <div class="relative border border-blue-800 p-4 rounded-lg hover:border-2 transition-colors duration-200">
@@ -84,7 +84,7 @@
             @endforeach
 
         </div>
-        <div class="max-w-6xl mx-auto mt-6 grid grid-cols-3 gap-6">
+        <div class="max-w-6xl mx-2 md:mx-auto mt-6 grid grid-cols-2 md:grid-cols-3 gap-6">
 
             @foreach($preparing as $edic)
                 <div class="relative border border-blue-800 p-4 rounded-lg hover:bg-blue-50 transition-colors duration-200">
