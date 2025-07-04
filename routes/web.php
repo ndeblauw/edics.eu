@@ -5,7 +5,7 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', \App\Http\Controllers\WelcomeController::class)->name('welcome');
+Route::get('/', \App\Http\Controllers\WelcomeController::class)->name('home');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
