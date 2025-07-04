@@ -14,6 +14,9 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+        <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="YFWZDOOZ" defer></script>
+
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
