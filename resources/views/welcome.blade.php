@@ -21,11 +21,15 @@
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+
     </head>
     <body class="min-h-screen">
         <header class="w-full bg-blue-900 text-white">
             <div class="flex items-center justify-between max-w-6xl mx-auto px-4 py-2">
-                <div class="text-lg font-light"><span class="font-bold">EDICs</span>.eu</div>
+                <div class="flex items-center space-x-2">
+                    <img src="{{asset('img/eu-logo.png')}}" class="w-6 h-6" alt="Stars logo"/>
+                    <div class="text-lg font-light"><span class="font-bold">EDICs</span>.eu</div>
+                </div>
             </div>
         </header>
 
