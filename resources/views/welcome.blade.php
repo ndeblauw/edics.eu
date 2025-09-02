@@ -33,24 +33,26 @@
             </div>
         </header>
 
-        <div class="max-w-6xl mx-2 md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 mt-6 text-sm md:text-base">
+        <div class="max-w-6xl mx-2 md:mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-6 mt-6 text-sm md:text-base">
 
-            <div class="md:border border-stone-700 p-4 rounded-lg col-span-2">
+            <div class="md:border border-stone-700 p-4 rounded-lg col-span-3">
                 <h1 class="text-2xl font-semibold text-blue-800 mb-4">What are EDICs?</h1>
                 <p class="mb-2">
                     <span class="font-semibold">European Digital Infrastructure Consortiums (EDICs)</span> are legal instruments
-                    designed to support and facilitate the implementation of multi-country digital projects.
-                    Their key features include:
+                    designed to support and facilitate the implementation of multi-country projects (MCPs) in the digital field.
+                    They are linked to the objectives of the <a class="underline decoration-blue-800 hover:bg-blue-50" target="_blank" href="https://digital-strategy.ec.europa.eu/en/library/digital-decade-policy-programme-2030">Digital Decade Policy Programme</a>
+                    and their key features include:
                 </p>
 
                 <ul class="list-disc pl-4">
-                    <li>Focus on <span class="font-semibold">deployment and scaling</span> up rather than just research</li>
+                    <li>Focus on <span class="font-semibold">deployment and scaling up</span> infrastructures, delivering services, and uniting relevant stakeholders, rather than just research</li>
+                    <li>Legal person established by an EC decision upon the application of at least three Member States</li>
                     <li>Member states in the driving seat (maintaining at least 51% of votes)</li>
                     <li>Flexible governance structure (only assembly of members and director are mandatory)</li>
+                    <li>Budget based on members’ contributions complemented by other sources of revenues</li>
                     <li><span class="font-semibold">Long-term sustainability</span> beyond typical project durations (24-48 months)</li>
-                    <li>Linked to <a class="underline decoration-blue-800 hover:bg-blue-50" target="_blank" href="https://digital-strategy.ec.europa.eu/en/library/digital-decade-policy-programme-2030">Digital Decade Policy Program</a> objectives</li>
                     <li>Enable <span class="font-semibold">pooling of resources</span> (financial, data, expertise) across countries</li>
-
+                    <li>As legal person eligible to apply for funding under certain calls under the Digital Europe programme</li>
                 </ul>
              </div>
 
