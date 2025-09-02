@@ -81,6 +81,17 @@
                     <h2 class="">
                         {{$edic->name}}
                     </h2>
+                    <div>
+                        <p
+                            x-data="{ expanded: false }"
+                            :class="expanded ? '' : 'line-clamp-3 cursor-pointer'"
+                            class="mt-2 text-sm ml-2 text-gray-500 transition-all duration-200"
+                            @click="expanded = !expanded"
+                            title="Click to read more"
+                        >
+                            {{$edic->description}}
+                        </p>
+                    </div>
 
                     <div class="flex justify-end">
                         {{-- Add a button with a right caret that opens the website (url property) in a new window. Background of button should be stone-200 --}}
@@ -105,8 +116,15 @@
                     <h2 class="">
                         {{$edic->name}}
                     </h2>
-
-
+                    <p
+                        x-data="{ expanded: false }"
+                        :class="expanded ? '' : 'line-clamp-2 cursor-pointer'"
+                        class="mt-2 text-sm ml-2 text-gray-500 transition-all duration-200"
+                        @click="expanded = !expanded"
+                        title="Click to read more"
+                    >
+                        {{$edic->description}}
+                    </p>
                 </div>
             @endforeach
 
@@ -147,5 +165,7 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+
+        @livewireScripts
     </body>
 </html>
