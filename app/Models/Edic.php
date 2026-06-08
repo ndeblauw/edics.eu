@@ -12,5 +12,4 @@ class Edic extends Model
 {
     use HasFactory;
     use SoftDeletes;
-
 }
