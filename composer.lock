@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "464e725d2057daca68b833fcc94f1e86",
+    "content-hash": "e3b824a074905c757793d9ad17d66d30",
     "packages": [
         {
             "name": "brick/math",
@@ -1059,16 +1059,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v13.21.1",
+            "version": "v13.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "303b5f8dc899f89e8c38c350b639b8fbd193ed16"
+                "reference": "d354afa45334cdac523fbc015f203a78d7e2f5c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/303b5f8dc899f89e8c38c350b639b8fbd193ed16",
-                "reference": "303b5f8dc899f89e8c38c350b639b8fbd193ed16",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d354afa45334cdac523fbc015f203a78d7e2f5c6",
+                "reference": "d354afa45334cdac523fbc015f203a78d7e2f5c6",
                 "shasum": ""
             },
             "require": {
@@ -1282,7 +1282,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-07-21T14:27:35+00:00"
+            "time": "2026-07-24T20:38:48+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -2176,16 +2176,16 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.10.5",
+            "version": "v1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "32a111951779f9dcf2a08a5704acb940ac9a146c"
+                "reference": "c921edbc4ff2c90e2ca1e87a9e7358e253e33b29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/32a111951779f9dcf2a08a5704acb940ac9a146c",
-                "reference": "32a111951779f9dcf2a08a5704acb940ac9a146c",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/c921edbc4ff2c90e2ca1e87a9e7358e253e33b29",
+                "reference": "c921edbc4ff2c90e2ca1e87a9e7358e253e33b29",
                 "shasum": ""
             },
             "require": {
@@ -2243,7 +2243,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2026-03-18T14:16:30+00:00"
+            "time": "2026-07-22T03:45:31+00:00"
         },
         {
             "name": "monolog/monolog",
