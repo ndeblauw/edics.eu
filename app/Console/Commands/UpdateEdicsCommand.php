@@ -18,7 +18,7 @@ class UpdateEdicsCommand extends Command
                 'slug' => 'alt-edic',
                 'acronym' => 'ALT-EDIC',
                 'name' => 'Alliance for Language Technologies',
-                'description' => 'European initiative for language technologies and AI, coordinating federated data production, neutral evaluation services and projects worth over €60 million.',
+                'description' => 'Addresses the scarcity of European language data by building a common European language technologies infrastructure, including Large Language Models for EU regional and official languages.',
                 'url' => 'https://www.alt-edic.eu',
                 'status' => 'established',
             ],
@@ -26,15 +26,15 @@ class UpdateEdicsCommand extends Command
                 'slug' => 'ldt-cityverse',
                 'acronym' => 'LDT CitiVERSE EDIC',
                 'name' => 'Networked Local Digital Twins towards the CitiVERSE',
-                'description' => 'Collaboration between 14 countries and numerous cities on interoperable local digital twins for urban decision-making, covering environmental, mobility and housing challenges.',
-                'url' => 'https://www.cityverse.eu',
+                'description' => 'Connects existing local digital twins across Europe into the EU CitiVERSE, using data, analytics and AI to simulate urban planning scenarios such as traffic, air quality, decarbonisation and congestion.',
+                'url' => 'https://ldtcitiverse-edic.eu/',
                 'status' => 'established',
             ],
             [
                 'slug' => 'europeum-edic',
                 'acronym' => 'EUROPEUM-EDIC',
                 'name' => 'European Blockchain Partnership and European Blockchain Services Infrastructure',
-                'description' => 'Governs and operates the European Blockchain Services Infrastructure (EBSI) on behalf of its Member States.',
+                'description' => 'Develops and expands the European Blockchain Services Infrastructure (EBSI) to deliver trusted EU-wide cross-border public services and reinforces cooperation on Web3 and decentralised technologies.',
                 'url' => 'https://europeum.eu',
                 'status' => 'established',
             ],
@@ -66,8 +66,8 @@ class UpdateEdicsCommand extends Command
                 'slug' => 'agri-food-edic',
                 'acronym' => 'Agri-Food EDIC',
                 'name' => 'European Digital Infrastructure Consortium for Agri-Food',
-                'description' => 'Strengthens EU-level digital and data infrastructure for the agriculture and food sectors, including a digital Farm ID aligned with the EU Digital Identity Wallet.',
-                'url' => null,
+                'description' => 'Supports digital innovation in Europe\'s agri-food sector, developing a common Digital Farm ID and exploring AI for risk management, traceability and carbon certification.',
+                'url' => 'https://edic4agrifood.eu/',
                 'status' => 'established',
             ],
             [
@@ -87,16 +87,48 @@ class UpdateEdicsCommand extends Command
                 'status' => 'preparing',
             ],
             [
+                'slug' => 'cancer-image',
+                'acronym' => 'EUCAIM',
+                'name' => 'Cancer Image Europe EDIC',
+                'description' => 'The future EDIC aims to contribute to the Cancer Image Europe platform which aims to link and make available large amounts of cancer image data and linked clinical information to clinicians, researchers and innovators.',
+                'url' => 'https://cancerimage.eu/',
+                'status' => 'preparing',
+            ],
+            [
+                'slug' => 'mobility',
+                'acronym' => 'MoLo',
+                'name' => 'EDIC for Mobility and Logistics',
+                'description' => 'Aims to boost data- and AI-driven innovations for mobility and logistics through cross-border use cases such as multimodal freight visibility and traffic management.',
+                'url' => null,
+                'status' => 'preparing',
+            ],
+            [
                 'slug' => 'genome-edic',
                 'acronym' => 'Genome EDIC',
                 'name' => 'Genome European Digital Infrastructure Consortium',
                 'description' => 'Future legal entity for the European Genomic Data Infrastructure, part of the 1+ Million Genomes initiative. Preparing to become a formally established EDIC.',
-                'url' => null,
+                'url' => 'https://gdi.onemilliongenomes.eu/',
+                'status' => 'preparing',
+            ],
+            [
+                'slug' => 'tef-health',
+                'acronym' => 'TEF-Health',
+                'name' => 'Testing and Experimentation Facility for Health AI and Robotics',
+                'description' => 'European Testing and Experimentation Facility (TEF) for health AI and robotics, not an EDIC. Rumours suggest the consortium is preparing to launch an EDIC.',
+                'url' => 'https://tefhealth.eu',
                 'status' => 'preparing',
             ],
         ];
 
+        $synced = 0;
+
         foreach ($edics as $edic) {
+            if (Edic::onlyTrashed()->where('slug', $edic['slug'])->exists()) {
+                $this->warn("Skipping `{$edic['acronym']}` (previously deleted).");
+
+                continue;
+            }
+
             $this->info("Syncing `{$edic['acronym']}`...");
 
             Edic::updateOrCreate(
@@ -109,8 +141,10 @@ class UpdateEdicsCommand extends Command
                     'status' => $edic['status'],
                 ],
             );
+
+            $synced++;
         }
 
-        $this->comment('Synced '.count($edics).' EDICs.');
+        $this->comment('Synced '.$synced.' EDICs.');
     }
 }

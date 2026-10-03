@@ -93,13 +93,15 @@
                         </p>
                     </div>
 
-                    <div class="flex justify-end">
-                        {{-- Add a button with a right caret that opens the website (url property) in a new window. Background of button should be stone-200 --}}
-                        <a href="{{ $edic->url }}" target="_blank" class="inline-block mt-2 px-4 py-2 bg-stone-100 rounded text-blue-800 hover:bg-stone-200 transition-colors duration-200">
-                            Visit Website
-                            <span class="ml-1">&#8594;</span>
-                        </a>
-                    </div>
+                    @if ($edic->url)
+                        <div class="flex justify-end">
+                            {{-- Add a button with a right caret that opens the website (url property) in a new window. Background of button should be stone-200 --}}
+                            <a href="{{ $edic->url }}" target="_blank" class="inline-block mt-2 px-4 py-2 bg-stone-100 rounded text-blue-800 hover:bg-stone-200 transition-colors duration-200">
+                                Visit Website
+                                <span class="ml-1">&#8594;</span>
+                            </a>
+                        </div>
+                    @endif
 
                 </div>
             @endforeach
